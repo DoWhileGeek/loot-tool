@@ -5,6 +5,7 @@ import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 import "./index.css";
 import { CssBaseline } from "@mui/material";
 import getTheme from "../theme"; // Import the getTheme function from theme.ts
+import Routes from "./Routes";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement!);
@@ -16,7 +17,7 @@ root.render(
     <CssBaseline />
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <App />
+        <Routes />
       </ThemeProvider>
     </StyledEngineProvider>
   </React.StrictMode>
