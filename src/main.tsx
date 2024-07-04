@@ -1,9 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
+import "./index.css";
+import { CssBaseline } from "@mui/material";
+import getTheme from "../theme"; // Import the getTheme function from theme.ts
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+const root = ReactDOM.createRoot(rootElement!);
+
+const theme = getTheme(rootElement); // Pass rootElement to getTheme to use it in the theme configuration
+
+root.render(
   <React.StrictMode>
-    <App />
+    <CssBaseline />
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </StyledEngineProvider>
   </React.StrictMode>
 );
