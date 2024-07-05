@@ -4,7 +4,7 @@
 # app specific files to ignore
 buildings.json
 creatures.json
-items.json
+loot.json
 
 ### Node ###
 # Logs

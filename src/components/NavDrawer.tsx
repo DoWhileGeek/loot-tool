@@ -1,4 +1,5 @@
 import Drawer from "@mui/material/Drawer";
+import DriveFolderUploadRoundedIcon from "@mui/icons-material/DriveFolderUploadRounded";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -6,6 +7,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-router-dom";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import FileDialog from "./FileDialog";
 
 interface NavDrawerProps {
   open: boolean;
@@ -26,12 +28,20 @@ const NavDrawer: React.FC<NavDrawerProps> = ({ open, closeDrawer }) => {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem disablePadding>
+          <FileDialog>
+            <ListItemButton>
+              <ListItemIcon>{<DriveFolderUploadRoundedIcon />}</ListItemIcon>
+              <ListItemText primary="files" />
+            </ListItemButton>
+          </FileDialog>
+        </ListItem>
       </List>
     </div>
   );
 
   return (
-    <Drawer open={open} anchor="left" onClose={closeDrawer}>
+    <Drawer open={open} anchor="left" onClose={closeDrawer} keepMounted>
       {DrawerList}
     </Drawer>
   );
