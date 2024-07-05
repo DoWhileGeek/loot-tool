@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import { Typography } from "@mui/material";
 import Home from "./pages/Home";
+import GenerateBuildingPage from "./pages/GenerateBuildingPage";
 
 const Router = () => {
   return (
@@ -9,6 +10,7 @@ const Router = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/gen/building" element={<GenerateBuildingPage />} />
           <Route
             path="*"
             element={
