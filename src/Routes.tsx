@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from "./App";
 import Layout from "./components/Layout";
 import { Typography } from "@mui/material";
+import Home from "./pages/Home";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Home />} />
           <Route
             path="*"
             element={

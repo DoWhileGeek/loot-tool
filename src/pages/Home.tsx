@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const App = () => {
   return (
     <div>
-      <Typography variant="h2" component="h1" className="font-medium">
+      <Typography variant="h2" component="h1" className="font-medium mb-3">
         Choose your adventure
       </Typography>
       <div className="grid gap-2 grid-cols-1 md:grid-cols-2 w-1/2 mx-auto">
