@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import CreaturesIcon from "@mui/icons-material/Groups3Rounded";
 import LootIcon from "@mui/icons-material/CategoryRounded";
-import BuildingIcon from "@mui/icons-material/HomeWorkRounded";
+import BuildingsIcon from "@mui/icons-material/HomeWorkRounded";
 import useLocalStorage from "../hooks/useLocalStorage"; // Assuming useLocalStorage is in the same directory
 
 interface FileDialogProps {
@@ -20,10 +20,7 @@ interface FileDialogProps {
 const FileButton = ({ text, icon, onClick, inputRef }) => {
   return (
     <ButtonBase onClick={() => inputRef.current.click()}>
-      <Paper
-        elevation={5}
-        className="w-full md:w-auto md:h-full aspect-auto md:aspect-square flex items-center justify-center flex-col gap-1 p-2"
-      >
+      <Paper className="w-full md:w-auto md:h-full aspect-auto md:aspect-square flex items-center justify-center flex-col gap-1 p-2">
         {icon}
         <Typography>{text}</Typography>
       </Paper>
@@ -106,8 +103,8 @@ const FileDialog: React.FC<FileDialogProps> = ({ children }) => {
               inputRef={creaturesInputRef}
             />
             <FileButton
-              text="building.json"
-              icon={<BuildingIcon fontSize="large" />}
+              text="buildings.json"
+              icon={<BuildingsIcon fontSize="large" />}
               onClick={(e) => handleFileChange(e, setBuildings)}
               inputRef={buildingsInputRef}
             />

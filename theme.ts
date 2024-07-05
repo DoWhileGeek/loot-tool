@@ -4,6 +4,11 @@ import { createTheme } from "@mui/material/styles";
 const getTheme = (rootElement: HTMLElement | null) =>
   createTheme({
     components: {
+      MuiPaper: {
+        defaultProps: {
+          elevation: 3,
+        },
+      },
       MuiPopover: {
         defaultProps: {
           container: rootElement,
