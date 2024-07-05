@@ -74,7 +74,6 @@ const GenerateBuildingPage = () => {
   const onSubmit = (data) => {
     const { building, loot, creatures } = generateBuilding(data.building);
     setItems(loot);
-    console.log(loot);
   };
 
   return (

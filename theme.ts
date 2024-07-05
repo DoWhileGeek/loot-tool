@@ -9,6 +9,12 @@ const getTheme = (rootElement: HTMLElement | null) =>
           elevation: 3,
         },
       },
+      MuiButton: {
+        defaultProps: {
+          variant: "contained",
+        },
+      },
+
       MuiPopover: {
         defaultProps: {
           container: rootElement,
