@@ -56,7 +56,6 @@ Each item object within the `items` array can either represent a category of ite
 {
   "classification": "commercial",
   "archetype": "hospital",
-  "name": "St. Mary's Hospital",
   "rarity": 0.8,
   "items": [
     {
